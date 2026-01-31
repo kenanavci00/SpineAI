@@ -1,0 +1,23 @@
+# Minespore Integration Requirements
+# Python packages required for Minespore-based analysis
+
+# Core Minespore framework
+mindspore>=2.0.0
+
+# ONNX support
+onnx>=1.12.0
+onnxruntime>=1.14.0
+
+# Computer Vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+
+# Numerical computing
+numpy>=1.24.0
+
+# Model conversion tools (optional)
+onnx-simplifier>=0.4.0
+
+# Existing requirements
+ultralytics>=8.0.0
+pillow>=9.0.0
