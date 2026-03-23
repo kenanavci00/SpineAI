@@ -5,7 +5,7 @@ import os
 import sys
 
 # ==========================================
-#        AYARLAR (TÜRKÇE KARAKTER DOSTU)
+#        
 # ==========================================
 # Resim yolunda 'ü', 'ş' vb. olsa da artık çalışır.
 RESIM_YOLU = r"C:\Users\kenan\PycharmProjects\spineAI\Postür Tespiti\6.jpeg"
