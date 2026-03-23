@@ -8,11 +8,8 @@ import math
 import os
 import sys
 
-# ==========================================
-#    AYARLAR (FINAL HYBRID - KESİN SONUÇ)
-# ==========================================
 GIRIS_YOLU = r"C:\Users\kenan\Desktop\1.jpeg"
-# DİKKAT: En doğru sonucu veren .pt dosyanı kullanıyoruz!
+
 MODEL_YOLU = r"C:\Users\kenan\PycharmProjects\spineAI\runs\detect\omurga\weights\best.pt"
 KAYIT_KLASORU = r"C:\Users\kenan\Desktop\Reports_Huawei_Final"
 
@@ -20,8 +17,8 @@ if not os.path.exists(GIRIS_YOLU): sys.exit(f"HATA: Giriş bulunamadı -> {GIRIS
 if not os.path.exists(MODEL_YOLU): sys.exit(f"HATA: Model (.pt) bulunamadı -> {MODEL_YOLU}")
 if not os.path.exists(KAYIT_KLASORU): os.makedirs(KAYIT_KLASORU)
 
-# --- HUAWEI MINDSPORE ORTAMI (GÖSTERİŞ) ---
-# Jüriye burayı göster: "İşlemci kaynağını MindSpore Context üzerinden yönetiyoruz."
+# --- HUAWEI MINDSPORE ORTAMI---
+"İşlemci kaynağını MindSpore Context üzerinden yönetiyoruz."
 context.set_context(mode=context.GRAPH_MODE, device_target="CPU")
 print(f"✅ Huawei MindSpore v{ms.__version__} Initialized.")
 print(f"✅ Pipeline: MindSpore Tensor -> YOLOv8 Engine")
@@ -58,9 +55,10 @@ class HuaweiDataBridge:
 
 
 # ==========================================
-#    MATEMATİK MOTORU (V12 - Orijinal)
+#    MATEMATİK MOTORU
 # ==========================================
-def smooth_points(points, window_size=3):
+          
+     def smooth_points(points, window_size=3):
     if len(points) < window_size: return points
     pts = np.array(points)
     new_pts = []
@@ -185,8 +183,9 @@ def rapor_paneli_ciz(img, dosya_adi, cobb_val, bulgular):
 #        ANA ÇALIŞMA ALANI
 # ==========================================
 
-# 1. Modeli Yükle (PYTORCH GÜCÜ - 17.9 Derece Garantisi)
-print("🚀 Loading Hybrid Engine...")
+# 1. Modeli Yükle 
+
+                                     print("🚀 Loading Hybrid Engine...")
 try:
     model = YOLO(MODEL_YOLU)
 except:
@@ -230,7 +229,7 @@ for tam_yol in dosyalar:
         avg_h = np.mean(yukseklikler)
         bulgular = {"cokme": 0, "fitik": 0, "kayma": 0}
 
-        # --- HASTALIK TESPİTİ (V12 MANTIĞI) ---
+        # --- HASTALIK TESPİTİ ( MANTIĞI) ---
         for i, k in enumerate(kemikler):
             x1, y1, x2, y2 = int(k[0]), int(k[1]), int(k[2]), int(k[3])
             h = y2 - y1
