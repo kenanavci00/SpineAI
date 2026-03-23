@@ -9,10 +9,10 @@ import os
 import sys
 
 # ==========================================
-#    SETTINGS (FINAL HYBRID - DEFINITIVE RESULT)
+#    SETTINGS ()
 # ==========================================
 INPUT_PATH = r"C:\Users\kenan\Desktop\1.jpeg"
-# ATTENTION: We are using the .pt file that gives the most accurate results!
+
 MODEL_PATH = r"C:\Users\kenan\PycharmProjects\spineAI\runs\detect\omurga\weights\best.pt"
 SAVE_FOLDER = r"C:\Users\kenan\Desktop\Reports_Huawei_Final"
 
@@ -21,7 +21,7 @@ if not os.path.exists(MODEL_PATH): sys.exit(f"ERROR: Model (.pt) not found -> {M
 if not os.path.exists(SAVE_FOLDER): os.makedirs(SAVE_FOLDER)
 
 # --- HUAWEI MINDSPORE ENVIRONMENT (PRESENTATION) ---
-# Show this part to the jury: "We manage processor resources via MindSpore Context."
+"We manage processor resources via MindSpore Context."
 context.set_context(mode=context.GRAPH_MODE, device_target="CPU")
 print(f"✅ Huawei MindSpore v{ms.__version__} Initialized.")
 print(f"✅ Pipeline: MindSpore Tensor -> YOLOv8 Engine")
@@ -58,7 +58,7 @@ class HuaweiDataBridge:
 
 
 # ==========================================
-#    MATHEMATICAL ENGINE (V12 - Original)
+#    MATHEMATICAL ENGINE ()
 # ==========================================
 def smooth_points(points, window_size=3):
     if len(points) < window_size: return points
@@ -185,7 +185,7 @@ def draw_report_panel(img, file_name, cobb_val, findings):
 #        MAIN WORKSPACE
 # ==========================================
 
-# 1. Load Model (PYTORCH POWER - Guaranteed 17.9 Degrees)
+# 1. Load Model
 print("🚀 Loading Hybrid Engine...")
 try:
     model = YOLO(MODEL_PATH)
@@ -230,7 +230,7 @@ for full_path in files:
         avg_h = np.mean(heights)
         findings = {"fracture": 0, "herniation": 0, "sliding": 0}
 
-        # --- DISEASE DETECTION (V12 LOGIC) ---
+        # --- DISEASE DETECTION () ---
         for i, b in enumerate(bones):
             x1, y1, x2, y2 = int(b[0]), int(b[1]), int(b[2]), int(b[3])
             h = y2 - y1
