@@ -6,7 +6,7 @@ import os
 import sys
 
 # ==========================================
-#        SETTINGS (V12 - PLATINUM ENGLISH)
+#        SETTINGS 
 # ==========================================
 GIRIS_YOLU = r"C:\Users\kenan\Desktop\1.jpeg"  # Path to image or folder
 MODEL_YOLU = r"C:\Users\kenan\PycharmProjects\spineAI\runs\detect\omurga\weights\best.pt"
@@ -36,7 +36,7 @@ print(f"Number of Patients: {len(resimler)}\n")
 
 
 # ==========================================
-#        MATH ENGINE (V12)
+#        MATH ENGINE ()
 # ==========================================
 
 def smooth_points(points, window_size=3):
@@ -215,7 +215,7 @@ def rapor_paneli_ciz(img, dosya_adi, goruntu_tipi, derece, bulgular):
 
 
 # ==========================================
-#        MAIN LOOP (V12)
+#        MAIN LOOP ()
 # ==========================================
 
 for dosya_adi in resimler:
