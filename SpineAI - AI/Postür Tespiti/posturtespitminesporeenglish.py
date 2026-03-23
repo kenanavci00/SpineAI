@@ -5,7 +5,7 @@ import os
 import sys
 
 # ==========================================
-#        SETTINGS (UTF-8 FRIENDLY)
+#        SETTINGS ()
 # ==========================================
 # Supports paths even if they contain special characters.
 RESIM_YOLU = r"C:\Users\kenan\PycharmProjects\spineAI\Postür Tespiti\6.jpeg"
