@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2
 
-# 1. Hazır Pose Modelini Yükle (Eğitmene gerek yok, indirip çalıştırır)
+# 1. Hazır Pose Modelini Yükle ()
 model = YOLO("yolov8n-pose.pt")
 
 # 2. Test Edeceğin İnsan Resmi (Yandan çekilmiş bir foto)
